@@ -49,7 +49,7 @@ weave launch --ipalloc-range $IPALLOC_RANGE
 
 # Notify other nodes
 HOSTNAME=`hostname`
-HOSTNUM=`echo "$HOSTNAME" | sed 's/c1agent//'`
+HOSTNUM=${HOSTNAME#$HOST_PREFIX}
 let LOWER_HOSTNUM=HOSTNUM-1
 let UPPER_HOSTNUM=HOSTNUM+1
 if [ "$LOWER_HOSTNUM" -ge 0 ]; then
