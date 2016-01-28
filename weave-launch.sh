@@ -30,7 +30,7 @@ fi
 # Does Weave Net need to be installed?
 grep MESOS_DOCKER_SOCKET /etc/default/mesos-slave
 if [ $? -ne 0 ]; then 
-    echo MESOS_DOCKER_SOCKET=/var/run/weave/weave.socket >> /etc/default/mesos-slave
+    echo MESOS_DOCKER_SOCKET=/var/run/weave/weave.sock >> /etc/default/mesos-slave
     curl -L git.io/weave -o /usr/local/bin/weave
     chmod +x /usr/local/bin/weave
     
