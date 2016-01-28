@@ -1,0 +1,15 @@
+{
+  "id": "weave-launch",
+  "cpus": 0.01,
+  "mem": 1.0,
+  "cmd": "chmod u+x weave-launch.sh && ./weave-launch.sh",
+  "uris": [
+    "https://raw.githubusercontent.com/jmspring/weave-on-mesos/master/weave-launch.sh"
+  ],
+  "constraints": [["hostname", "UNIQUE"]],
+  "instances": 10,
+  "env": {
+    "HOST_PREFIX": "c1agent",
+    "IPALLOC_RANGE": "10.32.0.0/12"
+  }
+}
