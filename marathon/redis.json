@@ -1,0 +1,19 @@
+{
+  "id": "redis",
+  "cpus": 0.25,
+  "mem": 256.0,
+  "instances": 4,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "redis",
+      "network": "BRIDGE",
+      "parameters": [
+        { "key": "hostname", "value": "redis.weave.local" }
+      ],
+      "portMappings": [
+        { "containerPort": 6379, "hostPort": 443, "protocol": "tcp" }
+      ]
+    }
+  }
+}

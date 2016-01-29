@@ -1,0 +1,19 @@
+{
+  "id": "nginx",
+  "cpus": 0.25,
+  "mem": 128.0,
+  "instances": 4,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "nginx",
+      "network": "BRIDGE",
+      "parameters": [
+        { "key": "hostname", "value": "nginx.weave.local" }
+      ],
+      "portMappings": [
+        { "containerPort": 80, "hostPort": 80, "protocol": "tcp" }
+      ]
+    }
+  }
+}
