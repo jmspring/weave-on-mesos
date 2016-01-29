@@ -1,0 +1,13 @@
+{
+  "name": "ip-app",
+  "version": "0.0.1",
+  "description": "Simple web app that returns the IP(s) of it's container as well as those with the same name.",
+  "author": "Jim Spring <jmspring@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
