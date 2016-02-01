@@ -32,6 +32,6 @@ exports.index = function(req, res){
         console.log(hostinfo);
         
         // Send response
-        res.render('index', { hostinfo: hostinfo });
+        res.render('index', { title: hostinfo.hostname, hostinfo: hostinfo });
     });
 };
