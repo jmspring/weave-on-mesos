@@ -38,6 +38,10 @@ if [ $? -ne 0 ]; then
     reboot
 fi
 
+# Due to a bug in Docker, sometimes a reboot leaves networking in a bad state.
+rm /var/lib/docker/network/files/local-kv.db
+restart docker
+
 # Start Weave Net
 # Is Weave Net already running?
 weave status
